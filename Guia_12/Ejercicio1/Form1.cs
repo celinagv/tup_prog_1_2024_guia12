@@ -12,11 +12,14 @@ namespace Ejercicio1
             lbMostrarValor.Text = textBox1.Text;
 
             Form2 fDialog = new Form2();
-            if (fDialog.ShowDialog() == DialogResult.OK)
+            if (fDialog.ShowDialog() == DialogResult.OK)//Invocar show dialog me muestra la ventana modal y me devuelve el valor que corresponde al boton presionado
             {
                 lbMostrarValor.Text = fDialog.tbValor.Text ;
             }
-
+            else
+            {
+                lbMostrarValor.Text = "Valor cancelado";
+            }
         }
 
     }
